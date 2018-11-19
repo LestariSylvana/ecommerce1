@@ -110,12 +110,12 @@ $koneksi = new mysqli("localhost","root","","tokoku");
 			</div>
 		</div>
 	</section>
-	<!--================End Home Banner Area =================-->
+	<!--================End Home Banner  =================-->
 			
 					
 
 
-<!--================Feature Product Area =================-->
+<!--================Koleski Area =================-->
 	<section class="feature_product_area section_gap">
 		<div class="main_box">
 			<div class="container-fluid">
@@ -149,6 +149,52 @@ $koneksi = new mysqli("localhost","root","","tokoku");
 			</div>
 		</div>
 	</section>
+
+	<!--================ start footer Area  =================-->
+	<footer class="footer-area section_gap">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3  col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6 class="footer_title">Tentang Kami</h6>
+						<p>Berdiri sejak tahun 2017. Kami mengedepankan kepuasan customer terhadap kualitas produk kami</p>
+					</div>
+				</div>
+				<div class="col-lg-4 col-md-6 col-sm-6">
+					<div class="single-footer-widget">
+						<h6 class="footer_title">Join Us!</h6>
+						<p>Dapatkan info terbaru tentang produk-produk kami.</p>
+						<div id="mc_embed_signup">
+							<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
+							 method="get" class="subscribe_form relative">
+								<div class="input-group d-flex flex-row">
+									<input name="EMAIL" placeholder="Alamat E-mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '"
+									 required="" type="email">
+									<button class="btn sub-btn">
+										<span class="lnr lnr-arrow-right"></span>
+									</button>
+								</div>
+								<div class="mt-10 info"></div>
+							</form>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-2 col-md-6 col-sm-6">
+					<div class="single-footer-widget f_social_wd">
+						<h6 class="footer_title">Follow Us</h6>
+						<p>Let's get online</p>
+						<div class="f_social">
+							<a href="#">
+								<i class="fa fa-facebook"></i>
+							</a>
+							<a href="#">
+								<i class="fa fa-twitter"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
 
 		
 
