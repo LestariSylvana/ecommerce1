@@ -9,13 +9,7 @@ $koneksi = new mysqli("localhost","root","","tokoku");
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
 	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="vendors/linericon/style.css">
 	<link rel="stylesheet" href="css/font-awesome.min.css">
-	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
-	<link rel="stylesheet" href="vendors/lightbox/simpleLightbox.css">
-	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
-	<link rel="stylesheet" href="vendors/animate-css/animate.css">
-	<link rel="stylesheet" href="vendors/jquery-ui/jquery-ui.css">
 	<!-- main css -->
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/responsive.css">
@@ -24,95 +18,120 @@ $koneksi = new mysqli("localhost","root","","tokoku");
 <body>
 <!--================Header Menu Area =================-->
 
-	<header class="header_area">
-		<div class="top_menu row m0">
-			<div class="container-fluid">
-				<div class="float-left">
-					<p>Hubungi Kami: 021 555 5698 </p>
-				</div>
-				<div class="float-right">
-					<ul class="right_side">
-						<li>
-							<a href="login.html">
-								Login/Daftar
-							</a>
-						</li>
-						<li>
-							<a href="contact.html">
-								Hubungi Kami
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light">
-				<div class="container-fluid">
-				
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<div class="row w-100">
-							<div class="col-lg-7 pr-0">
-								<ul class="nav navbar-nav center_nav pull-right">
-									<li class="nav-item active">
-										<a class="nav-link" href="index.html">Home</a>
-									</li>
-										<li class="nav-item submenu dropdown">
-												<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Belanja</a>
-										<ul class="dropdown-menu">
-											<li class="nav-item">
-												<a class="nav-link" href="category.html">Kategori</a>
-												<li class="nav-item">
-													<a class="nav-link" href="single-product.html">Detail Produk</a>
-										</ul>
-									</li>
-										
-									<li class="nav-item">
-										<a class="nav-link" href="contact.html">Kontak</a>
-									</li>
-								</ul>
-							</div>
+	<?php
+//koneksi database
+$koneksi = new mysqli("localhost","root","","tokoku");
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Butik Muslimah Syar'i</title>
 
-							<div class="col-lg-5">
-								<ul class="nav navbar-nav navbar-right right_nav pull-right">
-									<hr>
-									<li class="nav-item">
-										<a href="#" class="icons">
-											<i class="fa fa-search" aria-hidden="true"></i>
-										</a>
-									</li>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
 
-									<hr>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+    <nav class="navbar navbar-default navbar-top">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-sm-8 col-xs-12">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                  </button>
+                  <a class="navbar-brand" href="#">
+                    <img alt="Brand" class="img-responsive img-logo" src="foto_produk/logo3.jpg">
+                  </a>
+                </div>
+              </div>
 
-									
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</div>
-	</header>
-	<!--================Header Menu Area =================-->
 
-	<!--================Home Banner Area =================-->
-	<section class="home_banner_area">
-		<div class="overlay"></div>
-		<div class="banner_inner d-flex align-items-center">
-			<div class="container">
-				<div class="banner_content row">
-					<div class="offset-lg-2 col-lg-8">
-						<img class="img-fluid" src="foto_produk/logo2.jpg" alt=""> 
-						<a class="white_bg_btn" href="#">Koleksi</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!--================End Home Banner  =================-->
-			
-					
+
+              <div class="col-md-8 col-sm-4 col-xs-12">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><span class="glyphicon glyphicon-shopping-cart text-btn-top"></span></a></li>
+                  </ul>
+                  <form action="search.php" method="get" role="search" class="navbar-form navbar-right">
+                    <div class="form-group">
+                      <input type="text" class="form-control form-top" placeholder="Type to search.." autofocus>
+                    </div>
+                    <button type="submit" class="btn btn-default btn-link btn-search-top text-btn-top"><span class="glyphicon glyphicon-search"></span></button>
+                  </form>
+
+                  <div class="clearfix"></div>
+
+                  <ul class="nav navbar-nav navbar-right menu-top">
+                    <li><a href="#">SHOP</a></li>
+                    <li><a href="#">KOLEKSI</a></li>
+                    <li><a href="#">TENTANG</a></li>
+                    <li><a href="#">LOGIN</a></li>
+                  </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+            </div>
+          </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+      <img src="foto_produk/slider1.jpg" alt="Slide1">
+      <div class="carousel-caption">
+        Hubungi Kami
+      </div>
+    </div>
+    <div class="item">
+      <img src="foto_produk/slider2.jpg" alt="Slider2">
+      <div class="carousel-caption">
+        Diskon 50% Setiap Jum'at
+      </div>
+    </div>
+    <div class="item">
+      <img src="foto_produk/slider3.jpg" alt="Slider3">
+      <div class="carousel-caption">
+        Dapatkan Barang-barang berkualitas untuk mempercantik fashion anda di website kami
+      </div>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
 
 
 <!--================Koleski Area =================-->
@@ -121,8 +140,8 @@ $koneksi = new mysqli("localhost","root","","tokoku");
 			<div class="container-fluid">
 				<div class="row">
 					<div class="main_title">
-						<h2>Produk Terbaru</h2>
-						<p>Mempercantik Syle Busana Muslim Anda.</p>
+						<h2>PRODUK MINGGU INI</h2>
+						<p>Most Wanted Items.</p>
 					</div>
 				</div>
 				<div class="row">
@@ -138,7 +157,7 @@ $koneksi = new mysqli("localhost","root","","tokoku");
 									<a href="#">
 										<h4><?php echo $perproduk['nama_produk']; ?></h4>
 									</a>
-									<h5><?php echo number_format($perproduk['harga_produk']); ?></h5>
+									<h5><?php echo "Rp" . number_format($perproduk['harga_produk']); ?></h5>
 									<a href="" class="btn btn-primary">Beli</a>
 								</div>
 							</div>
@@ -151,49 +170,43 @@ $koneksi = new mysqli("localhost","root","","tokoku");
 	</section>
 
 	<!--================ start footer Area  =================-->
-	<footer class="footer-area section_gap">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-3  col-md-6 col-sm-6">
-					<div class="single-footer-widget">
-						<h6 class="footer_title">Tentang Kami</h6>
-						<p>Berdiri sejak tahun 2017. Kami mengedepankan kepuasan customer terhadap kualitas produk kami</p>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-6 col-sm-6">
-					<div class="single-footer-widget">
-						<h6 class="footer_title">Join Us!</h6>
-						<p>Dapatkan info terbaru tentang produk-produk kami.</p>
-						<div id="mc_embed_signup">
-							<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01"
-							 method="get" class="subscribe_form relative">
-								<div class="input-group d-flex flex-row">
-									<input name="EMAIL" placeholder="Alamat E-mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address '"
-									 required="" type="email">
-									<button class="btn sub-btn">
-										<span class="lnr lnr-arrow-right"></span>
-									</button>
-								</div>
-								<div class="mt-10 info"></div>
-							</form>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-2 col-md-6 col-sm-6">
-					<div class="single-footer-widget f_social_wd">
-						<h6 class="footer_title">Follow Us</h6>
-						<p>Let's get online</p>
-						<div class="f_social">
-							<a href="#">
-								<i class="fa fa-facebook"></i>
-							</a>
-							<a href="#">
-								<i class="fa fa-twitter"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
+<div class="footer">
+  <div class="container">
+    <div class="row footer-div">
+      <div class="col-md-4">
+        <h4 class="title-footer">Member</h4>
+        <p><strong>Daftar Member</strong></p>
+        <form class="form-newsletter">
+          <div class="input-group">
+          <input type="email" class="form-control form-bottom" placeholder="Type your email here">
+          <span class="input-group-btn">
+          <button class="btn btn-default btn-search-bottom" type="button"><strong>GO</strong></button>
+          </span>
+          </div>
+        </form>
+      </div>
+      <div class="col-md-3 col-md-offset-1">
+        <h4 class="title-footer">More Info</h4>
+        <ul class="list-unstyled list-contact">
+          <li><a href="#">Bagaimana Cara Order</a></li>
+          <li><a href="#">Pengiriman</a></li>
+          <li><a href="#">Member</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4 class="title-footer">Contact Owner</h4>
+        <p><strong>Lestari Sylana - Jl. Jalan Bersama No 7 Kota Medan Kodepos 20224 </strong></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
 			
 
 		
